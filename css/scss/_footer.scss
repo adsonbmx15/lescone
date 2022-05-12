@@ -1,0 +1,17 @@
+footer {
+  .copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  padding: 20px 0;
+  background: $cinza;
+  @include box-shadow(0 0 0 10px $cinza);
+  p {
+    color: $bege-claro;
+    @include d(s) {
+      text-align: center;
+    }
+  }
+}
