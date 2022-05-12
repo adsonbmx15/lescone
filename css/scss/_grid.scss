@@ -3,6 +3,7 @@ $cols: 12;
 $gutter: 20px;
 $l-device: 1200px;
 $m-device: 760px;
+$sm-device: 759px;
 $s-device: 480px;
 
 // Box-sizing
@@ -21,6 +22,10 @@ $s-device: 480px;
     }
   } @else if $size == m {
     @media screen and (min-width: #{$m-device}) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media screen and (min-width: #{$s-device + 1}) and (max-width: #{$m-device - 1}) {
       @content;
     }
   } @else if $size == s {
@@ -101,6 +106,9 @@ $s-device: 480px;
   position: relative;
   @include d(m) {
     max-width: $m-device;
+  }
+  @include d(sm) {
+    max-width: $sm-device;
   }
   @include d(s) {
     max-width: $s-device;
